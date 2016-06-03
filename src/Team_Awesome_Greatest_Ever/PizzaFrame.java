@@ -12,7 +12,7 @@ public class PizzaFrame extends JFrame
 {
 	private final int FRAME_WIDTH, FRAME_HEIGHT;
 	private JPanel choicesPanel, topingsPanel;
-	private JCheckBox temp1, temp2, temp3;
+	private JCheckBox pepperoni, sausage, mushrooms;
 	private String[] topings;
 	
 	public PizzaFrame(int width, int height)
@@ -33,13 +33,13 @@ public class PizzaFrame extends JFrame
 	public void createTopingsPanel()
 	{
 		topingsPanel = new JPanel(new GridLayout(3,1));
-		temp1 = new JCheckBox("Temp 1");
-		temp2 = new JCheckBox("Temp 2");
-		temp3 = new JCheckBox("Temp 3");
+		pepperoni = new JCheckBox("Pepperoni");
+		sausage = new JCheckBox("Sausage");
+		mushrooms = new JCheckBox("Mushrooms");
 		
-		topingsPanel.add(temp1);
-		topingsPanel.add(temp2);
-		topingsPanel.add(temp3);
+		topingsPanel.add(pepperoni);
+		topingsPanel.add(sausage);
+		topingsPanel.add(mushrooms);
 	}
 	
 	public String[] getTopings()
@@ -52,17 +52,17 @@ public class PizzaFrame extends JFrame
 		@Override
 		public void actionPerformed(ActionEvent e) 
 		{
-			if(temp1.isSelected())
+			if(pepperoni.isSelected())
 			{
-				topings[0] = "Temp 1";
+				topings[0] = "Pepperoni";
 			}
-			if(temp2.isSelected())
+			if(sausage.isSelected())
 			{
-				topings[1] = "Temp 2";
+				topings[1] = "Sausage";
 			}
-			if(temp3.isSelected())
+			if(mushrooms.isSelected())
 			{
-				topings[2] = "Temp 3";
+				topings[2] = "Mushrooms";
 			}
 		}
 	}
