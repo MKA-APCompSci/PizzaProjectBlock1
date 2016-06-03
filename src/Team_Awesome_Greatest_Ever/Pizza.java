@@ -32,5 +32,27 @@ public class Pizza
 		g2.fill(sauce);
 		g2.setColor(Color.YELLOW);
 		g2.fill(cheese);
+		
+		for(String a : topings)
+		{
+			if(a.equals("Temp 1"))
+			{
+				Ellipse2D.Double temp1 = new Ellipse2D.Double(x, y, (int) diameter * 0.30, (int) diameter * 0.30);
+				g2.setColor(Color.BLACK);
+				g2.fill(temp1);
+			}
+			else if(a.equals("Temp 2"))
+			{
+				Ellipse2D.Double temp2 = new Ellipse2D.Double(x + 50, y + 50, (int) diameter * 0.30, (int) diameter * 0.30);
+				g2.setColor(Color.BLACK);
+				g2.fill(temp2);
+			}
+			else if(a.equals("Temp 3"))
+			{
+				Ellipse2D.Double temp3 = new Ellipse2D.Double(x + 100, y + 100, (int) diameter * 0.30, (int) diameter * 0.30);
+				g2.setColor(Color.BLACK);
+				g2.fill(temp3);
+			}
+		}
 	}
 }

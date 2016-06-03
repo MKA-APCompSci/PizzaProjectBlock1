@@ -22,6 +22,12 @@ public class PizzaFrame extends JFrame
 		this.setSize(FRAME_WIDTH, FRAME_HEIGHT);
 		this.setTitle("Make Your Pizza");
 		topings = new String[3];
+		
+		this.createTopingsPanel();
+		choicesPanel = new JPanel(new GridLayout(1, 3));
+		choicesPanel.add(topingsPanel);
+		
+		this.add(choicesPanel);
 	}
 	
 	public void createTopingsPanel()
